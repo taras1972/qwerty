@@ -1,12 +1,14 @@
 @import 'imports/_setting';
 @import 'imports/_mixins';
 @import 'imports/sprite';
+/*-------------icons---------------*/ 
 .icon-account{
 	.sprite(@account-big);
 	@media screen and (min-width: 768px){
 		.sprite(@account);
 	}
 }
+/*-------------grid-----------*/
 .row{
 	&:after{
 		content: '';
@@ -21,6 +23,17 @@
 @media screen and (min-width: 768px){
 	.grid-univers(m, 9);
 }
+/*----------general----------*/
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center
+}
 @media screen and (min-width: 970px){
 	.grid-univers(l, 12);
 }
+@import 'imports/header';

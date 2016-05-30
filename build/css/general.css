@@ -1,0 +1,177 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+/*-------------icons---------------*/
+.icon-account {
+  background-image: url(../img/sprite.png);
+  background-position: -61px 0px;
+  width: 40px;
+  height: 38px;
+}
+@media screen and (min-width: 768px) {
+  .icon-account {
+    background-image: url(../img/sprite.png);
+    background-position: -111px -83px;
+    width: 14px;
+    height: 13px;
+  }
+}
+/*-------------grid-----------*/
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.col {
+  float: left;
+}
+.xs1 {
+  width: 50%;
+}
+.xs2 {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .m1 {
+    width: 11.11111111%;
+  }
+  .m2 {
+    width: 22.22222222%;
+  }
+  .m3 {
+    width: 33.33333333%;
+  }
+  .m4 {
+    width: 44.44444444%;
+  }
+  .m5 {
+    width: 55.55555556%;
+  }
+  .m6 {
+    width: 66.66666667%;
+  }
+  .m7 {
+    width: 77.77777778%;
+  }
+  .m8 {
+    width: 88.88888889%;
+  }
+  .m9 {
+    width: 100%;
+  }
+}
+/*----------general----------*/
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+@media screen and (min-width: 970px) {
+  .l1 {
+    width: 8.33333333%;
+  }
+  .l2 {
+    width: 16.66666667%;
+  }
+  .l3 {
+    width: 25%;
+  }
+  .l4 {
+    width: 33.33333333%;
+  }
+  .l5 {
+    width: 41.66666667%;
+  }
+  .l6 {
+    width: 50%;
+  }
+  .l7 {
+    width: 58.33333333%;
+  }
+  .l8 {
+    width: 66.66666667%;
+  }
+  .l9 {
+    width: 75%;
+  }
+  .l10 {
+    width: 83.33333333%;
+  }
+  .l11 {
+    width: 91.66666667%;
+  }
+  .l12 {
+    width: 100%;
+  }
+}
+.header {
+  background-color: #ffffff;
+}
+.header-top {
+  background-color: #000;
+}
+.header-pad_top {
+  padding-top: 37px;
+}
+.header-box {
+  display: inline-block;
+  vertical-align: top;
+  border-left: 2px solid #444444;
+  color: #ffffff;
+}
+.header-box:first-child {
+  border-left: none;
+}
+.header .custom {
+  text-align: center;
+  text-transform: uppercase;
+  color: #838383;
+}
